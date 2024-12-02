@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: pink ; /* Soft blue background */
+}
+
+.calculator {
+    background-color: lightgreen; /* Bright yellow background for the calculator */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 350px; /* Increased width */
+    padding: 20px;
+}
+
+#display {
+    width: 100%;
+    height: 60px;
+    background-color: #f1f1f1;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 30px;
+    text-align: right;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    padding: 20px;
+    font-size: 20px;
+    background-color: #ffeb3b;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #f0d111; /* Darker yellow when hovered */
+}
+
+button.operator {
+    background-color: #ff4081; /* Pink for operator buttons */
+    color: white;
+}
+
+button.operator:hover {
+    background-color: #f50057; /* Darker pink for hover */
+}
+
+button.zero {
+    grid-column: span 2;
+    background-color: #4caf50; /* Green for 0 button */
+    color: white;
+}
+
+button.zero:hover {
+    background-color: #388e3c; /* Darker green on hover */
+}
+
+button:active {
+    background-color: #ccc;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:nth-child(odd) {
+    background-color: #ffeb3b; /* Yellow for odd buttons */
+}
+
+button:nth-child(even) {
+    background-color: #03a9f4; /* Blue for even buttons */
+}
+
+button:nth-child(4n) {
+    background-color: #8bc34a; /* Green for every 4th button */
+}
+
+button:nth-child(4n):hover {
+    background-color: #7cb342; /* Darker green on hover */
+}
+
